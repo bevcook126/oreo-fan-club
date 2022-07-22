@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <title><%= title %></title>
 </head>
 <body>
-  <nav>
+  <nav> 
+    <img id="oreo-head" src="https://i.imgur.com/FMjUVm5.png">
     <a href="/" <%- title === 'HOME' ? 'class="active"' : '' %>>HOME</a>
+    <a href="/oreos" <%- title === 'All Oreos' ? 'class="active"' : '' %>>ALL OREOS</a>
+    <a href="/countries" <%- title === 'Around The World' ? 'class="active"' : '' %>>AROUND THE WORLD</a>
     <% if (user) { %>
-      <a href="/oreos/new" <%- title === 'ADD OREO' ? 'class="active"' : '' %>>ADD MOVIE</a>
+      <a href="/oreos/new" <%- title === 'ADD' ? 'class="active"' : '' %>>ADD OREO</a>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
@@ -19,4 +25,3 @@
   </nav>
   
   <main>
-    <h1><%= title %></h1>

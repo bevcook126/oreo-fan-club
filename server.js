@@ -13,6 +13,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var oreosRouter = require('./routes/oreos');
 
 var app = express();
 
@@ -45,6 +46,7 @@ const isLoggedIn = require('./config/auth');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/oreos', oreosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

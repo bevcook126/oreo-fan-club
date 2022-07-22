@@ -1,10 +1,9 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
+  font: 14px "Nunito", Helvetica, Arial, sans-serif;
+  background-image: url(https://i.imgur.com/pwzHavX.png);
+  background-size: 100vh;
+  text-align: center;
 }
 
 .login {
@@ -15,5 +14,48 @@ a {
 }
 
 .login img {
+  height: 25px;
+  padding: 5px;
+}
+
+nav, #footer {
+display: flex;
+align-items: center;
+background: #8cd7ee;
+border-radius: 10px;
+margin: auto;
+}
+
+nav > a {
+  margin: 0 30px;
+  color: black;
+}
+
+#oreo-head {
   height: 30px;
+  padding: 5px;
+}
+
+h1 {
+  background-color: #8cd7ee;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 30vh;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#home-page {
+  display: flex;
+  justify-content: center;
+}
+
+#home-page > p {
+  background-color: #8cd7ee;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 30px;
+  width: 30vh;
 }
