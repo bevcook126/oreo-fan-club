@@ -3,7 +3,8 @@ const Oreo = require('../models/oreo');
 module.exports = {
     index,
     new: newOreo,
-    create
+    create,
+    show
 };
 
 function index(req, res) {
@@ -26,4 +27,13 @@ function create(req, res) {
         res.redirect('/oreos');
     });
 }
-  
+
+function show(req, res) {
+    Oreo.findById(req.params.id, function(err, oreo) {
+        res.render('oreos/show', {
+            title: 'Oreo Stats',
+            oreo
+        });
+
+    });
+}
