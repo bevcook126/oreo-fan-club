@@ -8,7 +8,7 @@ module.exports = {
 
 function index(req, res) {
     Oreo.find({}, function(err, oreos) {
-        res.render('oreos/index', { title: 'All Oreos' });
+        res.render('oreos/index', { title: 'All Oreos', oreos });
     })
 }
 

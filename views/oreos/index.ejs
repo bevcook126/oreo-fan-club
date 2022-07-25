@@ -9,6 +9,13 @@
   </thead>
   <tbody>
   <h1>OREOS</h1>
+  <% oreos.forEach(function(o) { %>
+    <tr>
+      <td><%= o.title %></td>
+      <td><%= o.releaseDate %></td>
+     
+    </tr>
+    <% }); %>
     </tbody>
   </table>
   
