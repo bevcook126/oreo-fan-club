@@ -9,6 +9,7 @@ module.exports = {
 
 function index(req, res) {
     Oreo.find({}, function(err, oreos) {
+        oreos.sort((a,b) => Number(a.releaseDate) - Number(b.releaseDate));
         res.render('oreos/index', { title: 'All Oreos', oreos });
     })
 }
