@@ -13,9 +13,11 @@ function addToAvail(req, res) {
         oreo.avail.push(req.body.countryId);
         oreo.save(function (err) {
             res.redirect(`/oreos/${oreo._id}`);
-        });
-    });
-}
+        })
+    })
+};
+    
+
 
 function create(req, res) {
     Country.create(req.body, function (err, performer) {

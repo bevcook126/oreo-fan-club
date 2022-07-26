@@ -3,14 +3,11 @@
 <h1>Edit Oreo</h1>
 
 <!-- action === href of an a tag -->
-<form action="/oreos/<%= oreo.id %>?_method=PUT" method="POST" autocomplete="off">
+<form action="/oreos/<%= oreo._id %>?_method=PUT" method="POST" autocomplete="off">
     <label>Name:</label>
     <input type="text" name="title" value="<%= oreo.title %>">
     <label>Release Date:</label>
-    <input type="date" name="releaseDate" value="<%= oreo.releaseDate %>">
-    <label>Countries Available (separate countries with commas):</label>
-    <input type="text" name="avail" value="<%= oreo.countries %>">
-    <input type="submit" value="Add Oreo">
+    <input type="date" name="releaseDate" value="<%= oreo.releaseDate %>" type="required">
   <br>
   <input type="submit" value="SAVE OREO">
 </form>

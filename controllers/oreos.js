@@ -53,13 +53,20 @@ function show(req, res) {
 
 }
 
+function update(req, res) {
+    Oreo.findOneAndUpdate(
+      {_id: req.params.id},
+      req.body,
+      function(err, oreo) {
+        if (err) return res.redirect(`/oreos/${oreo._id}/edit`);
+        res.redirect(`/oreos/${oreo._id}`)
+      }
+    );
+  }
+
 function edit(req, res) {
     Oreo.findById(req.params.id, function(err, oreo) {
-        res.render('oreos/edit', { title: 'Edit Oreo', oreo });
+        res.render('oreos/edit', { title: 'Edit Oreo', oreo })
     });
 }
 
-function update(req, res) {
-    Oreo.update(req.params.id, req.body);
-    res.redirect(`/oreos/${req.params.id}`);
-}

@@ -13,7 +13,9 @@
     ).join('') %>
   </ul>
 </section>
-<form id="add-country-to-avail" action="/oreos/<%= oreo._id %>/countries" method="POST">
+
+
+<form id="add-country-to-avail" action="/countries/<%= oreo._id %>" method="POST">
   <select name="countryId">
     <%- countries.map(c => 
       `<option value="${c._id}">${c.name}</option>`
@@ -21,7 +23,9 @@
   </select>
   <button type="submit">Add to Countries</button>
 </form>
-<a href="/oreos/<%= oreo.id %>/edit">EDIT OREO</a>
+
+
+<a href="/oreos/<%= oreo._id %>/edit">EDIT OREO</a>
 </section>
 
 <br><br><h2>Reviews</h2>
