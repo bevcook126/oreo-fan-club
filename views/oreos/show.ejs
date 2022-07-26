@@ -10,30 +10,6 @@
   <div><%= oreo.countries %></div>
 </section>
 
-
-<h2>Add Country</h2>
-  <div id="countryform">
-    <form id="add-country-form" method="POST" action="/oreos/<%= oreo._id %>/countries">
-      <label>Countries:</label>
-      <select name="country">
-        <option value="Argentina">Argentina</option>
-        <option value="Brazil">Brazil</option>
-        <option value="Canada">Canada</option>
-        <option value="China">China</option>
-        <option value="Germany">Germany</option>
-        <option value="India">India</option>
-        <option value="Mexico">Mexico</option>
-        <option value="Morocco">Morocco</option>
-        <option value="Pakistan">Pakistan</option>
-        <option value="Russia">Russia</option>
-        <option value="Spain">Spain</option>
-        <option value="United Kingdom">United Kingdom</option>
-        <option value="United States">United States</option>
-      </select>
-      <input type="submit" value="Add Country">
-    </form>
-  </div>
-
 <br><br><h2>Reviews</h2>
 <% if (user) { %>
     <form id="add-review-form" method="POST"
