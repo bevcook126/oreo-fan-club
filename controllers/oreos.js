@@ -54,12 +54,12 @@ function show(req, res) {
 }
 
 function edit(req, res) {
-    const oreo = Oreo.getOne(req.params.id);
-    res.render('oreos/edit', { oreo });
+    Oreo.findById(req.params.id, function(err, oreo) {
+        res.render('oreos/edit', { title: 'Edit Oreo', oreo });
+    });
 }
 
 function update(req, res) {
-    req.body.done = !!req.body.done;
     Oreo.update(req.params.id, req.body);
     res.redirect(`/oreos/${req.params.id}`);
 }
