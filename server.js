@@ -48,7 +48,7 @@ const isLoggedIn = require('./config/auth');
 app.use('/', indexRouter);
 app.use('/', reviewsRouter);
 app.use('/oreos', oreosRouter);
-app.use('/', countriesRouter);
+app.use('/countries', countriesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

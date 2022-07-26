@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<a href="/countries/new"	<%- title === 'Add Country' ? 'class="active"' : '' %>>
+    ADD COUNTRY</a>
+
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>Oreo</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% countries.forEach(function(c) { %>
+      <tr>
+        <td><%= c.name %></td>
+        <td><a href="/oreos/<%= o._id %>"><%= c.oreo %></a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>

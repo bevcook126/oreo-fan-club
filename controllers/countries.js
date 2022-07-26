@@ -4,7 +4,8 @@ const Oreo = require('../models/oreo');
 module.exports = {
     create,
     new: newCountry,
-    addToAvail
+    addToAvail,
+    index
 };
 
 function addToAvail(req, res) {
@@ -34,4 +35,10 @@ function newCountry(req, res) {
             countries
         });
     });
+}
+
+function index(req, res) {
+    Country.find({}, function(err, countries) {
+        res.render('countries/index', { title: 'Around the World', countries });
+    })
 }
