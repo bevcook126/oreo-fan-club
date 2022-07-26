@@ -7,7 +7,20 @@
   <div>Release Date: </div>
   <div><%= oreo.releaseDate %></div>
   <div>Countries Available: </div>
-  <div><%= oreo.countries %></div>
+  <ul>
+    <%- oreo.avail.map(c => 
+      `<li>${c.name}</li>`
+    ).join('') %>
+  </ul>
+</section>
+<form id="add-country-to-avail" action="/oreos/<%= oreo._id %>/countries" method="POST">
+  <select name="countryId">
+    <%- countries.map(c => 
+      `<option value="${c._id}">${c.name}</option>`
+    ).join('') %>
+  </select>
+  <button type="submit">Add to Countries</button>
+</form>
 </section>
 
 <br><br><h2>Reviews</h2>

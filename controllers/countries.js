@@ -4,12 +4,12 @@ const Oreo = require('../models/oreo');
 module.exports = {
     create,
     new: newCountry,
-    addToCountries
+    addToAvail
 };
 
-function addToCountries(req, res) {
+function addToAvail(req, res) {
     Oreo.findById(req.params.id, function(err, oreo) {
-        oreo.countries.push(req.body.countryId);
+        oreo.avail.push(req.body.countryId);
         oreo.save(function(err) {
             res.redirect(`/oreos/${oreo._id}`);
         });

@@ -1,4 +1,5 @@
 const Oreo = require('../models/oreo');
+const Country = require('../models/country');
 
 module.exports = {
     index,
@@ -19,6 +20,8 @@ function newOreo(req, res) {
   }
 
 function create(req, res) {
+    req.body.avail = req.body.avail.replace(/\s*,\s*/g, ',');
+  if (req.body.avail) req.body.avail = req.body.avail.split(',');
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     }
@@ -30,11 +33,20 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    Oreo.findById(req.params.id, function(err, oreo) {
-        res.render('oreos/show', {
-            title: 'Oreo Stats',
-            oreo
-        });
-
+    Oreo.findById(req.params.id)
+    .populate('avail')
+    .exec(function(err, oreo) {
+        Country.find(
+            {_id: {$nin: oreo.avail}},
+            function(err, countries) {
+                res.render('oreos/show', {
+                    title: 'Oreo Stats',
+                    oreo,
+                    countries
+                });
+                
+            }
+        );
     });
-}
+
+    }

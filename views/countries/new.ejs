@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<div>Before adding, please ensure that the country is not in the following list:</div>
+<section id="badge-container">
+  <% countries.forEach(function(c) { %>
+    <article class="badge"><%= c.name %></article>
+  <% }) %>
+</section>
+
+<form id="add-country-form" action="/countries" method="POST">
+  <label>Name:</label>
+  <input type="text" name="name">
+  <input type="submit" value="Add Country">
+</form>
+
+<%- include('../partials/footer') %>

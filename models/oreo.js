@@ -12,10 +12,8 @@ const reviewSchema = new Schema({
         max: 5,
         default: 5
     },
-    countries: {
-        type: String,
-        enum: ['Argentina', 'Brazil' , 'Canada' , 'China' , 'Germany', 'India', 'Mexico', 'Morocco', 'Pakistan', 'Russia', 'Spain', 'United Kingdom', 'United States']
-    },
+    avail: 
+        [{type: Schema.Types.ObjectId, ref: 'Country'}],
     user: {type: Schema.Types.ObjectId, ref: 'User'},
     userName: String,
     userAvatar: String

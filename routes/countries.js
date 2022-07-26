@@ -9,6 +9,6 @@ router.get('/countries/new', countriesCtrl.new);
 // POST /performers
 router.post('/countries', countriesCtrl.create);
 // POST /movies/:id/performers
-router.post('/oreos/:id/countries', countriesCtrl.addToCountries);
+router.post('/oreos/:id/countries', countriesCtrl.addToAvail);
 
 module.exports = router;
