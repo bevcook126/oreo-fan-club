@@ -4,7 +4,7 @@ const countriesCtrl = require('../controllers/countries');
 
 router.get('/new', countriesCtrl.new);
 router.post('/', countriesCtrl.create);
-router.post('/oreos/:id/countries', countriesCtrl.addToAvail);
 router.get('/', countriesCtrl.index);
+router.post('/oreos/:id/countries', countriesCtrl.addToAvail);
 
 module.exports = router;
