@@ -45,9 +45,8 @@ function newCountry(req, res) {
 
 function index(req, res) {
     Country.find({}, function (err, countries) {
-        Oreo.findById(req.params.id, function(err, oreo) {
-            res.render('countries/index', { title: 'Around the World', countries, oreo });
+        Oreo.find({}, function(err, oreos) {
+            res.render('countries/index', { title: 'Around the World', countries, oreos });
         })
-
     })
 }

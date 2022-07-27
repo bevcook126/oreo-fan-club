@@ -29,14 +29,14 @@
 
   <tbody id="countries-index">
     <% countries.forEach(function(c) { %>
-        <%= c.name %>
-        <% oreo.avail.forEach(function(avail) { %>
-          <% if (avail.name.includes(c.name)) { %>
-            <%= oreo.title %>
-          <% } %>
-        <% }) %>
+      <%= c.name %>
+      <% oreos.forEach(function(oreo) { %>
+        <% if (oreo.avail.some(a => a._id.equals(c._id))) { %>
+          <%= oreo.title %>
+        <% } %>
       <% }) %>
-    </tbody>
+    <% }) %>
+  </tbody>
 
 <%- include('../partials/footer') %>
 
