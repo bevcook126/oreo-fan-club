@@ -45,10 +45,10 @@ app.use(function(req, res, next) {
 
 const isLoggedIn = require('./config/auth');
 
-app.use('/', indexRouter);
-app.use('/', reviewsRouter);
-app.use('/oreos', oreosRouter);
-app.use('/countries', countriesRouter);
+app.use('/', indexRouter, isLoggedIn);
+app.use('/', reviewsRouter, isLoggedIn);
+app.use('/oreos', oreosRouter, isLoggedIn);
+app.use('/countries', countriesRouter, isLoggedIn);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -4,10 +4,10 @@
 <section id="show-page">
   <div>Name: </div>
   <div><%= oreo.title %></div>
-  <div>Release Date: </div>
-  <div><%= oreo.releaseDate %></div>
+  <div>Release Year: </div>
+  <div><%= oreo.releaseYear %></div>
   <div>Countries Available: </div>
-  <ul>
+  <ul id="countries">
     <%- oreo.avail.map(c => 
       `<li>${c.name}</li>`
     ).join('') %>
@@ -74,6 +74,8 @@
                 </form>
               <% } %>
             </td>
+
+
           </tr>
           <% }); %>
           <tr>

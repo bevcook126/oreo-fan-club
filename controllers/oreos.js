@@ -12,7 +12,7 @@ module.exports = {
 
 function index(req, res) {
     Oreo.find({}, function (err, oreos) {
-        oreos.sort((a, b) => Number(a.releaseDate) - Number(b.releaseDate));
+        oreos.sort((a, b) => Number(a.releaseYear) - Number(b.releaseYear));
         res.render('oreos/index', { title: 'All Oreos', oreos });
     })
 }
@@ -31,6 +31,7 @@ function create(req, res) {
     oreo.save(function (err) {
         if (err) return res.redirect('/oreos/new');
         res.redirect('/oreos');
+        console.log(oreo)
     });
 }
 

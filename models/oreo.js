@@ -23,7 +23,7 @@ const reviewSchema = new Schema({
 
 const oreoSchema = new Schema({
     title: String,
-    releaseDate: Date,
+    releaseYear: Number,
     avail: [{type: Schema.Types.ObjectId, ref: 'Country'}],
     reviews: [reviewSchema]
 }, {

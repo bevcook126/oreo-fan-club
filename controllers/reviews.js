@@ -2,7 +2,7 @@ const Oreo = require('../models/oreo');
 
 module.exports = {
   create,
-  delete: deleteReview
+  delete: deleteReview,
 };
 
 
@@ -29,3 +29,4 @@ async function deleteReview(req, res, next) {
       return next(err);
     }
   }
+
