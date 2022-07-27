@@ -32,7 +32,7 @@ nav > a {
   color: black;
 }
 
-#oreo-head {
+#oreo-head, #index-imgs {
   height: 30px;
   padding: 5px;
 }
@@ -74,4 +74,23 @@ section, table, form {
 #countries {
   list-style-type: none;
   padding-left: 0
+}
+
+#show-img {
+  height: 25vmin;
+}
+
+table {
+  width: 90vmin;
+  border-radius: 10px;
+}
+
+#show-page {
+  display: flex;
+  justify-content: space-evenly
+}
+
+.info {
+  margin-top: auto;
+  margin-bottom: auto;
 }

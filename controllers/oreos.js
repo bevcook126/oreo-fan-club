@@ -22,11 +22,11 @@ function newOreo(req, res) {
 }
 
 function create(req, res) {
-    req.body.avail = req.body.avail.replace(/\s*,\s*/g, ',');
-    if (req.body.avail) req.body.avail = req.body.avail.split(',');
-    for (let key in req.body) {
-        if (req.body[key] === '') delete req.body[key];
-    }
+    // req.body.avail = req.body.avail.replace(/\s*,\s*/g, ',');
+    // if (req.body.avail) req.body.avail = req.body.avail.split(',');
+    // for (let key in req.body) {
+    //     if (req.body[key] === '') delete req.body[key];
+    // }
     const oreo = new Oreo(req.body);
     oreo.save(function (err) {
         if (err) return res.redirect('/oreos/new');

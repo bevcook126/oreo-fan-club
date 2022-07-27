@@ -1,92 +1,108 @@
 <%- include('../partials/header') %>
 
 
-<section id="show-page">
-  <div>Name: </div>
-  <div><%= oreo.title %></div>
-  <div>Release Year: </div>
-  <div><%= oreo.releaseYear %></div>
+    <section id="show-page">
+        
+        <div><img id="show-img" src="<%= oreo.imgUrl %>""></div>
+    <div class="info">
+        <div>Name: <%= oreo.title %></div>
+         <div>Release Year: <%= oreo.releaseYear %></div><br>
+         </div>
+  <div class="info">
   <div>Countries Available: </div>
   <ul id="countries">
-    <%- oreo.avail.map(c => 
-      `<li>${c.name}</li>`
-    ).join('') %>
-  </ul>
-</section>
+            <%- oreo.avail.map(c=>
+                `<li>${c.name}</li>`
+                ).join('') %>
+                </ul>
+        </div>
+        </div>
+    </section>
 
 
-<form id="add-country-to-avail" action="/countries/<%= oreo._id %>" method="POST">
-  <select name="countryId">
-    <%- countries.map(c => 
-      `<option value="${c._id}">${c.name}</option>`
-    ).join('') %>
-  </select>
-  <button type="submit">Add to Countries</button>
-</form>
-
-
-<a href="/oreos/<%= oreo._id %>/edit">EDIT OREO</a>
-</section>
-
-<br><br><h2>Reviews</h2>
-<% if (user) { %>
-    <form id="add-review-form" method="POST"
-      action="/oreos/<%= oreo._id %>/reviews">
-      <label>Review:</label>
-      <textarea name="content"></textarea>
-      <label>Rating:</label>
-      <select name="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5" selected>5</option>
-      </select>
-      <input type="submit" value="Add Review">
+    <form id="add-country-to-avail" action="/countries/<%= oreo._id %>" method="POST">
+        <select name="countryId">
+            <%- countries.map(c=>
+                `<option value="${c._id}">${c.name}</option>`
+                ).join('') %>
+        </select>
+        <button type="submit">Add to Countries</button>
     </form>
-  <% } %>
 
 
-<% if (oreo.reviews.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>User</th>
-          <th>Date</th>
-          <th>Review</th>
-          <th>Rating</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% let sum = 0; %>
-        <% oreo.reviews.forEach(function(r) { %>
-          <% sum += r.rating %>
-          <tr>
-            <td class="review-user"><img id = avatar src="<%= r.userAvatar %>" alt="avatar" referrerpolicy="no-referrer"><%= r.userName %></td>
-            <td><%= r.createdAt.toLocaleDateString() %></td>
-            <td><%= r.content %></td>
-            <td><%= r.rating %></td>
-            <td>
-              <% if ( user?._id.equals(r.user) ) { %>
-                <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-                  <button type="submit">X</button>
-                </form>
-              <% } %>
-            </td>
+    <a href="/oreos/<%= oreo._id %>/edit">EDIT OREO</a>
+    </section>
+
+    <br><br>
+    <h2>Reviews</h2>
+    <% if (user) { %>
+        <form id="add-review-form" method="POST" action="/oreos/<%= oreo._id %>/reviews">
+            <label>Review:</label>
+            <textarea name="content"></textarea>
+            <label>Rating:</label>
+            <select name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected>5</option>
+            </select>
+            <input type="submit" value="Add Review">
+        </form>
+        <% } %>
 
 
-          </tr>
-          <% }); %>
-          <tr>
-            <td colspan="3"></td>
-            <td><%= (sum / oreo.reviews.length).toFixed(2) %></td>
-          </tr>
-      </tbody>
-    </table>
-  <% } else { %>
-    <h5>No Reviews Yet</h5>
-  <% } %>
+            <% if (oreo.reviews.length) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Date</th>
+                            <th>Review</th>
+                            <th>Rating</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% let sum=0; %>
+                            <% oreo.reviews.forEach(function(r) { %>
+                                <% sum +=r.rating %>
+                                    <tr>
+                                        <td class="review-user"><img id=avatar src="<%= r.userAvatar %>" alt="avatar"
+                                                referrerpolicy="no-referrer">
+                                            <%= r.userName %>
+                                        </td>
+                                        <td>
+                                            <%= r.createdAt.toLocaleDateString() %>
+                                        </td>
+                                        <td>
+                                            <%= r.content %>
+                                        </td>
+                                        <td>
+                                            <%= r.rating %>
+                                        </td>
+                                        <td>
+                                            <% if ( user?._id.equals(r.user) ) { %>
+                                                <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+                                                    <button type="submit">X</button>
+                                                </form>
+                                                <% } %>
+                                        </td>
 
 
-<%- include('../partials/footer') %>
+                                    </tr>
+                                    <% }); %>
+                                        <tr>
+                                            <td colspan="3"></td>
+                                            <td>
+                                                <%= (sum / oreo.reviews.length).toFixed(2) %>
+                                            </td>
+                                        </tr>
+                    </tbody>
+                </table>
+                <% } else { %>
+                    <h5>No Reviews Yet</h5>
+                    <% } %>
+
+
+                        <%- include('../partials/footer') %>

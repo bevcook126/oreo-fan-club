@@ -1,16 +1,18 @@
 <%- include('../partials/header') %>
 <table id="list">
   <thead>
-    <tr>
+    <tr id="oreo-index-headings">
+      <th>Image</th>
       <th>Name</th>
       <th>Release<br>Year</th>
-      <th></th>
+      <th>Detail Page</th>
     </tr>
   </thead>
   <tbody>
   <h1>OREOS</h1>
   <% oreos.forEach(function(o) { %>
-    <tr>
+    <tr id="oreo-index">
+      <td><img id="index-imgs" src="<%= o.imgUrl %>"></td>      
       <td><%= o.title %></td>
       <td><%= o.releaseYear %></td>
       <td><a href="/oreos/<%= o._id %>">DETAILS</a></td>

@@ -25,7 +25,8 @@ const oreoSchema = new Schema({
     title: String,
     releaseYear: Number,
     avail: [{type: Schema.Types.ObjectId, ref: 'Country'}],
-    reviews: [reviewSchema]
+    reviews: [reviewSchema],
+    imgUrl: String,
 }, {
     timestamps: true
 });
