@@ -8,7 +8,6 @@
   <thead>
     <tr>
       <th>Country</th>
-      <th>Oreo</th>
       <th></th>
     </tr>
   </thead>
@@ -25,5 +24,20 @@
       <% }); %>
     </tbody>
   </table>
-  
+
+
+
+  <tbody id="countries-index">
+    <% countries.forEach(function(c) { %>
+        <%= c.name %>
+        <% oreo.avail.forEach(function(avail) { %>
+          <% if (avail.name.includes(c.name)) { %>
+            <%= oreo.title %>
+          <% } %>
+        <% }) %>
+      <% }) %>
+    </tbody>
+
 <%- include('../partials/footer') %>
+
+

@@ -3,6 +3,8 @@
 <h1>Edit Oreo</h1>
 
 <!-- action === href of an a tag -->
+
+<td><img class ="edit-imgs" src="<%= oreo.imgUrl %>"></td>
 <form action="/oreos/<%= oreo._id %>?_method=PUT" method="POST" autocomplete="off">
     <label>Image URL:</label>
 <input type="text" name="imgUrl" value="<%= oreo.imgUrl %>">
@@ -13,5 +15,6 @@
   <br>
   <input type="submit" value="SAVE OREO">
 </form>
+
 
 <%- include('../partials/footer') %>

@@ -76,21 +76,42 @@ section, table, form {
   padding-left: 0
 }
 
-#show-img {
+#show-img, .edit-imgs {
   height: 25vmin;
 }
 
 table {
-  width: 90vmin;
+  width: 80vmin;
   border-radius: 10px;
 }
 
 #show-page {
   display: flex;
-  justify-content: space-evenly
+  justify-content: center;
+  border-radius: 10px;
+}
+
+#show-page > div {
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .info {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+#new-oreo > div {
+  padding: 30px;
+}
+
+section {
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+
+}
+
+.view {
+  background: white;
 }

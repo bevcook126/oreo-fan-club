@@ -18,7 +18,7 @@
     <a href="/countries" <%- title === 'Around The World' ? 'class="active"' : '' %>>AROUND THE WORLD</a>
     <% if (user) { %>
       <a href="/oreos/new" <%- title === 'ADD' ? 'class="active"' : '' %>>ADD OREO</a>
-      <img id="avatar" src="<%= user.avatar %>"><a href="/logout">LOG OUT</a>
+      <a href="/auth/google" class="login">LOG OUT&nbsp;<img id="avatar" src="<%= user.avatar %>"></a>
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
     <% } %>

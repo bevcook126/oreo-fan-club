@@ -36,8 +36,18 @@ function newCountry(req, res) {
         });
 }
 
+// function index(req, res) {
+//     Country.find({}, function (err, countries) {
+//         res.render('countries/index', { title: 'Around the World', countries });
+//     })
+// }
+
+
 function index(req, res) {
     Country.find({}, function (err, countries) {
-        res.render('countries/index', { title: 'Around the World', countries });
+        Oreo.findById(req.params.id, function(err, oreo) {
+            res.render('countries/index', { title: 'Around the World', countries, oreo });
+        })
+
     })
 }

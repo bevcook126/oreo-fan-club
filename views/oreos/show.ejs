@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
-
+<section class="view">
 
     <section id="show-page">
         
+        <div class="info">
+            <div>Name: <%= oreo.title %></div>
+            <div>Release Year: <%= oreo.releaseYear %></div><br>
+        </div>
         <div><img id="show-img" src="<%= oreo.imgUrl %>""></div>
-    <div class="info">
-        <div>Name: <%= oreo.title %></div>
-         <div>Release Year: <%= oreo.releaseYear %></div><br>
-         </div>
   <div class="info">
   <div>Countries Available: </div>
   <ul id="countries">
@@ -104,5 +104,5 @@
                     <h5>No Reviews Yet</h5>
                     <% } %>
 
-
+</section>
                         <%- include('../partials/footer') %>
