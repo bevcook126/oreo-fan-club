@@ -2,26 +2,24 @@
 <%- include('../partials/header') %>
 </div>
 <div>
-<head>    <title><%= title %></title>
-</head>
-<section id="new-oreo">
+  <head><title><%= title %></title></head>
+  <section id="new-oreo">
+    <div>
+  <td><img src="https://i.imgur.com/oL5gZk7.jpg"></td>
+  </div>
   <div>
-<td><img src="https://i.imgur.com/oL5gZk7.jpg"></td>
+    <form id="new-form" action="/oreos" method="POST">
+      <label>Name:</label>
+      <input type="text" name="title">
+      <label>Release Year:</label>
+      <input type="text" name="releaseYear">
+      <label>Image URL:</label>
+      <input type="text" name="imgUrl">
+      <input type="submit" value="Add Oreo">
+    </form>
+  </div>
+  </section>
 </div>
-<div>
-<form id="new-form" action="/oreos" method="POST">
-  <label>Name:</label>
-  <input type="text" name="title">
-  <label>Release Year:</label>
-  <input type="text" name="releaseYear">
-  <label>Image URL:</label>
-  <input type="text" name="imgUrl">
-  <input type="submit" value="Add Oreo">
-</form>
-</div>
-</section>
-</div>
-
 <div>
 <%- include('../partials/footer') %>
 </div>

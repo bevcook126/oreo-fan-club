@@ -22,11 +22,6 @@ function newOreo(req, res) {
 }
 
 function create(req, res) {
-    // req.body.avail = req.body.avail.replace(/\s*,\s*/g, ',');
-    // if (req.body.avail) req.body.avail = req.body.avail.split(',');
-    // for (let key in req.body) {
-    //     if (req.body[key] === '') delete req.body[key];
-    // }
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;
@@ -34,7 +29,7 @@ function create(req, res) {
     oreo.save(function (err) {
         if (err) return res.redirect('/oreos/new');
         res.redirect('/oreos');
-        console.log(oreo)
+        console.log("oreo")
     });
 }
 
@@ -61,11 +56,12 @@ function update(req, res) {
     // User.findOne({'oreo.user': req.user._id});
     // if (!oreo) throw new Error('Nice Try!');
     Oreo.findOneAndUpdate(
-      {_id: req.params.id, user: req.user_id},
+      {_id: req.params.id, user: req.user._id},
       req.body,
+      {new: true},
       function(err, oreo) {
         if (err) return res.redirect(`/oreos/${oreo._id}/edit`);
-        res.redirect(`/oreos/${oreo._id}`)
+        res.redirect(`/oreos/${oreo._id}`);
       }
     );
   }
@@ -73,6 +69,7 @@ function update(req, res) {
 function edit(req, res) {
     Oreo.findById(req.params.id, function(err, oreo) {
         res.render('oreos/edit', { title: 'Edit Oreo', oreo })
+        console.log(oreo)
     });
 }
 

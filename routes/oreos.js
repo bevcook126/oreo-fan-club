@@ -8,7 +8,7 @@ router.get('/new', oreosCtrl.new);
 router.get('/:id', oreosCtrl.show);
 router.get('/:id/edit', oreosCtrl.edit);
 router.put('/:id', oreosCtrl.update);
-
+router.post('/', oreosCtrl.create);
 
 
 
