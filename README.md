@@ -12,9 +12,7 @@
 </div>
 
 <div align = center><h2>Description :pencil:</h2></div>
-Versions of Connect 4 date back hundreds of years, entertaining sea-bound sailors. The Connect 4 we know today became a sensation in the 1970s when it was distributed by Milton Bradley, and is still sold today by Hasbro. <br>
-
-In my version of Connect 4, players will compete using their chosen pizza toppings as tokens. A winner will be determined when 4 or more of the same pizza topping are lined up consecutively in a row, column, or on a diagonal. In a physical version of Connect 4, the player drops their token from the top of a chosen column, letting gravity take it to the next available slot. In my version, small slices of pizza at the top of the board represent each column, and upon clicking them, the player drops their topping in that chosen column. If a player wants to reset the game after a winner is determined, they can reset the board by clicking the rolling pin button and "rolling out some new dough". When the game results in a win or tie, the players can celebrate their hard work with That's Amore! (and hopefully some pizza on the side).
+Since the invention of the Oreo in 1912, over 100 varieties of Milk's Favorite Cookie have graced our shelves, pantries, and plates for Santa worldwide.
 
 <div align = center><h2>Screenshots</h2><div>
 
@@ -34,7 +32,7 @@ In my version of Connect 4, players will compete using their chosen pizza toppin
 
 <div align = center><h2>Getting Started :atom_symbol:</h2></div>
 
-[Click to play Connect 4!](https://bevcook126.github.io/connect4project/)
+[Click to become a member!](https://oreo-fan-club.herokuapp.com/)
 
 <div align = left><h3>Instructions</h3><br>
 Pepperoni is up first. Click on the pizza slice buttons on the top of the crust to drop your first topping. Your goal is to line up 4 of your toppings in a row either vertically, horizontally, or diagonally.

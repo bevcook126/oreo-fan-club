@@ -26,7 +26,6 @@ height: 150px;
 width: 103%;
 display: flex;
 align-items: baseline;
-/* margin-top: -50px; */
 justify-content: flex-end;
 top: 0;
 position: absolute;
@@ -85,7 +84,7 @@ table {
 }
 
 #show-img, .edit-imgs {
-  height: 25vmin;
+  width: 25vmin;
 }
 
 table {
