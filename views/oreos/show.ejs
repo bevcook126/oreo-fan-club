@@ -1,6 +1,9 @@
+<div>
 <%- include('../partials/header') %>
+</div>
+<div>
 <section class="view">
-
+   
     <section id="show-page">
         
         <div class="info">
@@ -20,21 +23,28 @@
     </section>
 
 
+    <% if (user) { %>
     <form id="add-country-to-avail" action="/countries/<%= oreo._id %>" method="POST">
         <select name="countryId">
             <%- countries.map(c=>
                 `<option value="${c._id}">${c.name}</option>`
                 ).join('') %>
         </select>
+
         <button type="submit">Add to Countries</button>
     </form>
+    <% } %>
+    
+    <br>
 
-
-    <a href="/oreos/<%= oreo._id %>/edit">EDIT OREO</a>
+    <% if ( user?._id.equals(oreo.user) ) { %>
+        <a href="/oreos/<%= oreo._id %>/edit">EDIT OREO</a>
+        
+        <% } %>
     </section>
 
     <br><br>
-    <h2>Reviews</h2>
+    <h1>Reviews</h1>
     <% if (user) { %>
         <form id="add-review-form" method="POST" action="/oreos/<%= oreo._id %>/reviews">
             <label>Review:</label>
@@ -104,5 +114,9 @@
                     <h5>No Reviews Yet</h5>
                     <% } %>
 
-</section>
+                </section>
+            </section>
+        </div>
+        <div>
                         <%- include('../partials/footer') %>
+                    </div>

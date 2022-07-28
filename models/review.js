@@ -21,17 +21,4 @@ const reviewSchema = new Schema({
     timestamps: true
 });
 
-const oreoSchema = new Schema({
-    title: String,
-    releaseYear: Number,
-    avail: [{type: Schema.Types.ObjectId, ref: 'Country'}],
-    reviews: [reviewSchema],
-    imgUrl: String,
-    user: {type: Schema.Types.ObjectId, ref: 'User'},
-    userName: String,
-    userAvatar: String
-}, {
-    timestamps: true
-});
-
-module.exports = mongoose.model('Oreo', oreoSchema);
+module.exports = mongoose.model('Review', reviewSchema);

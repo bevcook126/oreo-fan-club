@@ -1,43 +1,35 @@
+<div>
 <%- include('../partials/header') %>
+</div>
 
-<a href="/countries/new"	<%- title === 'Add Country' ? 'class="active"' : '' %>>
-    ADD COUNTRY</a>
+<div>
+<section id="countries-index">
+    <div id ="countries-banner">
+    <div>
+        <img src="https://i.imgur.com/l58VqD4.png?1"><br>
+        <% if (user) { %>
 
-
-<table id="list">
-  <thead>
-    <tr>
-      <th>Country</th>
-      <th></th>
-    </tr>
-  </thead>
-
- 
-
-
-  <tbody id="countries">
+    <a href="/countries/new" id="add-country-form"	<%- title === 'Add Country' ? 'class="active"' : '' %>>
+        ADD COUNTRY</a>
+        <% } %>
+    </div>
+    </div>
+<div>
+  <ul id="countries-list">
     <% countries.forEach(function(c) { %>
-      <tr>
-        <td><%= c.name %></td>
-
-      </tr>
-      <% }); %>
-    </tbody>
-  </table>
-
-
-
-  <tbody id="countries-index">
-    <% countries.forEach(function(c) { %>
-      <%= c.name %>
+      <li id="country-names"><br><br><%= c.name %></li>
       <% oreos.forEach(function(oreo) { %>
         <% if (oreo.avail.some(a => a._id.equals(c._id))) { %>
-          <%= oreo.title %>
+          <li><%= oreo.title %></li>
         <% } %>
       <% }) %>
     <% }) %>
-  </tbody>
+        </ul>
+    </div>
+    </section>
 
+</div>
+
+<div>
 <%- include('../partials/footer') %>
-
-
+</div>

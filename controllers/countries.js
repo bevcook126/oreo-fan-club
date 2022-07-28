@@ -36,16 +36,11 @@ function newCountry(req, res) {
         });
 }
 
-// function index(req, res) {
-//     Country.find({}, function (err, countries) {
-//         res.render('countries/index', { title: 'Around the World', countries });
-//     })
-// }
-
 
 function index(req, res) {
     Country.find({}, function (err, countries) {
         Oreo.find({}, function(err, oreos) {
+            // countries.sort((a, b) => (a.country) - (b.country));
             res.render('countries/index', { title: 'Around the World', countries, oreos });
         })
     })

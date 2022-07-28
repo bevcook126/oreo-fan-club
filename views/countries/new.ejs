@@ -1,5 +1,8 @@
+<div>
 <%- include('../partials/header') %>
-
+</div>
+<div>
+<section class="view">
 <div>Before adding, please ensure that the country is not in the following list:</div>
 <section id="badge-container">
   <% countries.forEach(function(c) { %>
@@ -12,5 +15,8 @@
   <input type="text" name="name">
   <input type="submit" value="Add Country">
 </form>
-
+</section>
+</div>
+<div>
 <%- include('../partials/footer') %>
+</div>

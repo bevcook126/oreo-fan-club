@@ -1,20 +1,23 @@
+<div>
 <%- include('../partials/header') %>
-
+</div>
+<div>
 <h1>Edit Oreo</h1>
 
 <!-- action === href of an a tag -->
-
+<section class="view">
 <td><img class ="edit-imgs" src="<%= oreo.imgUrl %>"></td>
-<form action="/oreos/<%= oreo._id %>?_method=PUT" method="POST" autocomplete="off">
+<form action="/oreos/<%= oreo._id %>?_method=PUT" id="edit-oreo-form" method="POST" autocomplete="off">
     <label>Image URL:</label>
 <input type="text" name="imgUrl" value="<%= oreo.imgUrl %>">
     <label>Name:</label>
     <input type="text" name="title" value="<%= oreo.title %>">
     <label>Release Year:</label>
     <input type="text" name="releaseYear" value="<%= oreo.releaseYear %>" type="required">
-  <br>
   <input type="submit" value="SAVE OREO">
 </form>
-
-
+</section>
+</div>
+<div>
 <%- include('../partials/footer') %>
+</div>

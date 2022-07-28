@@ -1,21 +1,30 @@
+<div>
 <%- include('./partials/header') %>
-
-
+</div>
+<div>
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>HOME</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body id="index">
     <br>
-    <h1><%= title %></h1>
     <div id="home-page">
     <img src="https://i.imgur.com/7kIPfsp.png">
-    <p>Accept all cookies?<br>(yeah) (hell yeah)</p>
+    
+    <p class ="home-links" id="blurb">
+    <% if (user) { %>
+      Welcome back to the oreo fan club! If you've encountered some new flavors, make sure to <a href="/oreos/new" class="home-links" %>>add them!</a>
+        <% } else { %>
+          <a href="/auth/google" class="home-links">Sign up&nbsp;</a>to be part of the Oreo Fan Club!
+      
+    <% } %>
+  </p>
     </div>
   </body>
 </html>
-
-
+</div>
+<div>
 <%- include('./partials/footer') %>
+</div>

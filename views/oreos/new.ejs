@@ -1,5 +1,9 @@
+<div>
 <%- include('../partials/header') %>
-<h1>Add New Oreo</h1>
+</div>
+<div>
+<head>    <title><%= title %></title>
+</head>
 <section id="new-oreo">
   <div>
 <td><img src="https://i.imgur.com/oL5gZk7.jpg"></td>
@@ -11,11 +15,13 @@
   <label>Release Year:</label>
   <input type="text" name="releaseYear">
   <label>Image URL:</label>
-  <input type="text" name="imgUrl"><br><br><br>
+  <input type="text" name="imgUrl">
   <input type="submit" value="Add Oreo">
 </form>
 </div>
 </section>
+</div>
 
-
+<div>
 <%- include('../partials/footer') %>
+</div>

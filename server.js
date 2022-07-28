@@ -45,8 +45,8 @@ app.use(function(req, res, next) {
 
 const isLoggedIn = require('./config/auth');
 
-app.use('/', indexRouter, isLoggedIn);
-app.use('/', reviewsRouter, isLoggedIn);
+app.use('/', indexRouter);
+app.use('/', reviewsRouter);
 app.use('/oreos', oreosRouter, isLoggedIn);
 app.use('/countries', countriesRouter, isLoggedIn);
 

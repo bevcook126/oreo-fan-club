@@ -27,6 +27,9 @@ function create(req, res) {
     // for (let key in req.body) {
     //     if (req.body[key] === '') delete req.body[key];
     // }
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
     const oreo = new Oreo(req.body);
     oreo.save(function (err) {
         if (err) return res.redirect('/oreos/new');
@@ -55,8 +58,10 @@ function show(req, res) {
 }
 
 function update(req, res) {
+    // User.findOne({'oreo.user': req.user._id});
+    // if (!oreo) throw new Error('Nice Try!');
     Oreo.findOneAndUpdate(
-      {_id: req.params.id},
+      {_id: req.params.id, user: req.user_id},
       req.body,
       function(err, oreo) {
         if (err) return res.redirect(`/oreos/${oreo._id}/edit`);
@@ -71,3 +76,11 @@ function edit(req, res) {
     });
 }
 
+// try {
+//     oreo.reviews.remove(req.params.id);
+//     await oreo.save();
+//     res.redirect(`/oreos/${oreo._id}`);
+//   } catch (err) {
+//     return next(err);
+//   }
+// }

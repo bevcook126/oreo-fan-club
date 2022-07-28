@@ -11,13 +11,14 @@
   <title><%= title %></title>
 </head>
 <body>
+  
   <nav> 
-    <img id="oreo-head" src="https://i.imgur.com/FMjUVm5.png">
-    <a href="/" <%- title === 'HOME' ? 'class="active"' : '' %>>HOME</a>
+
+    <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
     <a href="/oreos" <%- title === 'All Oreos' ? 'class="active"' : '' %>>ALL OREOS</a>
-    <a href="/countries" <%- title === 'Around The World' ? 'class="active"' : '' %>>AROUND THE WORLD</a>
+    <a href="/countries" <%- title === 'Around the World' ? 'class="active"' : '' %>>AROUND THE WORLD</a>
     <% if (user) { %>
-      <a href="/oreos/new" <%- title === 'ADD' ? 'class="active"' : '' %>>ADD OREO</a>
+      <a href="/oreos/new" <%- title === 'Add Oreo' ? 'class="active"' : '' %>>ADD OREO</a>
       <a href="/auth/google" class="login">LOG OUT&nbsp;<img id="avatar" src="<%= user.avatar %>"></a>
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
