@@ -45,15 +45,12 @@ function show(req, res) {
                         oreo,
                         countries
                     });
-
                 }
             );
         });
-
 }
 
 function update(req, res) {
-
     Oreo.findOneAndUpdate(
       {_id: req.params.id, user: req.user._id},
       req.body,
@@ -63,7 +60,7 @@ function update(req, res) {
         res.redirect(`/oreos/${oreo._id}`);
       }
     );
-  }
+}
 
 function edit(req, res) {
     Oreo.findById(req.params.id, function(err, oreo) {

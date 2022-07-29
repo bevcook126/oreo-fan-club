@@ -28,5 +28,5 @@ async function deleteReview(req, res, next) {
     } catch (err) {
       return next(err);
     }
-  }
+}
 
