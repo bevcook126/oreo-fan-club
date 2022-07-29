@@ -53,8 +53,7 @@ function show(req, res) {
 }
 
 function update(req, res) {
-    // User.findOne({'oreo.user': req.user._id});
-    // if (!oreo) throw new Error('Nice Try!');
+
     Oreo.findOneAndUpdate(
       {_id: req.params.id, user: req.user._id},
       req.body,
@@ -72,12 +71,3 @@ function edit(req, res) {
         console.log(oreo)
     });
 }
-
-// try {
-//     oreo.reviews.remove(req.params.id);
-//     await oreo.save();
-//     res.redirect(`/oreos/${oreo._id}`);
-//   } catch (err) {
-//     return next(err);
-//   }
-// }
