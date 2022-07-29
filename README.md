@@ -15,14 +15,14 @@
 Since the invention of the Oreo in 1912, over 85 varieties of Milk's Favorite Cookie have graced our shelves, pantries, and bellies worldwide. Oreos are currently available in over 100 countries; some flavors are regionally exclusive (like Wasabi:fire:). The purpose of the Oreo Fan Club is to collectively discover all Oreo flavors and figure out where to get them if you haven't been able to. Because users are able to rate and review the Oreos, it's easier to decide which ones are worth hopping on a plane for.:airplane:
 
 <div align = center><h2>Screenshots</h2><div>
-
+| | |
+|------------|:------------:|------------:|
 | *Home: Visitor*<br>When opening the app, the visitor sees a welcome page with a link to sign up.| *Logging In*<br>Users are able to sign up or log in with Google OAuth. | *Home: User*<br>Once signed up, users are able to add/edit oreos and leave reviews. |
-| ------------| ------------| ------------|
 | <img src="https://i.imgur.com/N1XCUdp.png">| <img src="https://i.imgur.com/6pJ1oaa.png">| <img src="https://i.imgur.com/Q55hEjk.png">|
-| ------------| ------------| ------------|
+
 
 | *Oreo Index*<br><br>Users view a list of all user-added Oreos.| *Details Page*<br>Users view one flavor's details, add countries to that Oreo's availability, and rate and review the flavor.| *Countries Index*<br>Users can view an Oreo's availability based on country. |
-| ------------| ------------| ------------|
+
 | <img src="https://i.imgur.com/yKV0wvM.png">| <img src="https://i.imgur.com/GAfP8Wt.png">| <img src="https://i.imgur.com/P71C48M.png">|
 
 | Description | Add an Oreo | Edit an Oreo | Add a Country |
