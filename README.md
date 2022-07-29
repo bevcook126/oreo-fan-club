@@ -24,7 +24,7 @@ Since the invention of the Oreo in 1912, over 85 varieties of Milk's Favorite Co
 | **OREO INDEX** | **DETAILS PAGE** | **COUNTRIES INDEX** |
 | <img src="https://i.imgur.com/yKV0wvM.png"> | <img src="https://i.imgur.com/GAfP8Wt.png"> | <img src="https://i.imgur.com/P71C48M.png"> |
 | Users view a list of all user-added Oreos. | Users view one flavor's details, add countries to that Oreo's availability, and rate and review the flavor. | Users can view an Oreo's availability based on country. |
-| ADD AN OREO | EDIT AN OREO | ADD A COUNTRY |
+| **ADD AN OREO** | **EDIT AN OREO** | **ADD A COUNTRY** |
 | <img src="https://i.imgur.com/6qgkOqv.png"> | <img src="https://i.imgur.com/f5wNAZz.png"> | <img src="https://i.imgur.com/Yxu4O1G.png"><br> |
 
 
