@@ -20,7 +20,7 @@ Since the invention of the Oreo in 1912, over 85 varieties of Milk's Favorite Co
 |---|---|---|
 | **HOME: VISITOR** | **LOGGING IN** | **HOME: USER** |
 | <img src="https://i.imgur.com/N1XCUdp.png"> | <img src="https://i.imgur.com/6pJ1oaa.png"> | <img src="https://i.imgur.com/Q55hEjk.png"> |
-| When opening the app, the visitor sees a welcome page with a link to sign up. | Users are able to sign up or log in with Google OAuth. | Once signed up, users are able to add/edit oreos and leave reviews. |
+| When opening the app, the visitor sees a welcome page with a link to sign up. | Users are able to sign up or log in with Google OAuth. | Once signed up, users are able to view/add/edit oreos and leave reviews. |
 | **OREO INDEX** | **DETAILS PAGE** | **COUNTRIES INDEX** |
 | <img src="https://i.imgur.com/yKV0wvM.png"> | <img src="https://i.imgur.com/GAfP8Wt.png"> | <img src="https://i.imgur.com/P71C48M.png"> |
 | Users view a list of all user-added Oreos. | Users view one flavor's details, add countries to that Oreo's availability, and rate and review the flavor. | Users can view an Oreo's availability based on country. |
