@@ -12,15 +12,17 @@
 </div>
 
 <div align = center><h2>Description :pencil:</h2></div>
-Since the invention of the Oreo in 1912, over 100 varieties of Milk's Favorite Cookie have graced our shelves, pantries, and plates for Santa worldwide.
+Since the invention of the Oreo in 1912, over 85 varieties of Milk's Favorite Cookie have graced our shelves, pantries, and bellies worldwide. Oreos are currently available in over 100 countries; some flavors are regionally exclusive (like Wasabi:fire:). The purpose of the Oreo Fan Club is to collectively discover all Oreo flavors and figure out where to get them if you haven't been able to. Because users are able to rate and review the Oreos, it's easier to decide which ones are worth hopping on a plane for.:airplane:
 
 <div align = center><h2>Screenshots</h2><div>
 
-| Description | Screenshot |
-|------------ | ------------|
-| **New Game**<br>The game starts with a fresh plain cheese pizza. Pepperoni starts and clicks on the pizza slice buttons to choose a column for their first topping. | <img src="https://i.imgur.com/WtUJPgY.png"> | 
-| **During Gameplay**<br>Pizza slices disappear when a column is full. | <img src="https://i.imgur.com/9QPGRuX.png"> |
-| **Winner Determined**<br>All pizza slices disappear and the replay rolling pin appears. The winning player is serenaded by Dean Martin. That's Amore! | <img src="https://i.imgur.com/9jf9l0M.png"> |
+| Description | Screenshot | Screenshot | Screenshot |
+|---- | ------------| ------------| ------------|
+| **Home Page** | <img src="https://i.imgur.com/N1XCUdp.png"><br>When opening the app, the visitor sees a welcome page with a link to sign up. Visitors are able to view all content, but are not able to add/edit oreos or leave reviews. | <img src="https://i.imgur.com/6pJ1oaa.png"><br>Users are able to sign up or log in with Google OAuth | <img src="https://i.imgur.com/Q55hEjk.png"><br>Once signed up, users are able to add/edit oreos and leave reviews. |
+
+| **Viewing Oreos** | <img src="https://i.imgur.com/yKV0wvM.png"><br>Oreo Index Page<br>Users view a list of all user-added Oreos | <img src="https://i.imgur.com/GAfP8Wt.png"><br>Details Page<br>Users view one flavor's details, add countries to that Oreo's availability, and rate and review the flavor. | <img src="https://i.imgur.com/P71C48M.png"><br>Country Index Page<br>Users can view an Oreo's availability based on country. Users can also add countries that are not yet listed in the Country Index.|
+
+| **Making Changes as a User** | <img src="https://i.imgur.com/6qgkOqv.png"><br>Add an Oreo | <img src="https://i.imgur.com/f5wNAZz.png"><br>Details Page<br>Edit an Oreo | <img src="https://i.imgur.com/Yxu4O1G.png"><br>Add a Country|
 
 <div align = center><h2>Technologies Used :computer:</h2></div>
 
@@ -29,29 +31,32 @@ Since the invention of the Oreo in 1912, over 100 varieties of Milk's Favorite C
 ![CSS3](https://img.shields.io/badge/-CSS-333?style=flat&logo=css3)
 ![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio)
+![MongoDB](https://img.shields.io/badge/-MongoDB-333?style=flat&logo=mongodb)
+![Express](https://img.shields.io/badge/-Express-333?style=flat&logo=express)
+![Mongoose ODM](https://img.shields.io/badge/-Mongoose_ODM-333?style=flat&logo=mongodb)
+![Trello](https://img.shields.io/badge/-Trello-333?style=flat&logo=trello)
+![Heroku](https://img.shields.io/badge/-Heroku-333?style=flat&logo=heroku)
+
 
 <div align = center><h2>Getting Started :atom_symbol:</h2></div>
 
-[Click to become a member!](https://oreo-fan-club.herokuapp.com/)
+[Click to join the club!](https://oreo-fan-club.herokuapp.com/)<br>
+[Link to Trello Board](https://trello.com/b/uwxkp1hv/p2)<br>
 
-<div align = left><h3>Instructions</h3><br>
-Pepperoni is up first. Click on the pizza slice buttons on the top of the crust to drop your first topping. Your goal is to line up 4 of your toppings in a row either vertically, horizontally, or diagonally.
-To reset the board, click on the rolling pin button at the bottom of the page.
 
 <div align = center><h2>Next Steps :fast_forward:</h2></div>
 
 ## Future Enhancements:
 
-- [ ] **Animation upon determination of a winner**
+- [ ] **Sort oreos by seasonality or limited availability status**
 
 - [ ] **Mobile-friendly version**
 
-- [ ] **Audio effects during gameplay** 
+- [ ] **"Favoriting" feature allowing users to save their favorite flavors**
 
-- [ ] **Option for 'Player versus Computer'** 
 
 ### References
 
-[What is the origin of Connect Four?](https://www.trianglelawngames.com/what-is-the-origin-of-connect-four/#:~:text=It%20was%20in%201974%20when,continues%20to%20sell%20the%20game.)
+[30 Best Oreo Flavors](https://www.delish.com/food-news/g26783387/best-oreo-flavors/)
 
 </div>
